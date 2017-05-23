@@ -1,0 +1,15 @@
+.left-section{
+    background-color: wheat;
+}
+
+.right-section{
+    background-color: lightblue;
+}
+
+section{
+    display: none;
+}
+
+section:first-child{
+    display: block;
+}

@@ -1,9 +1,32 @@
 <html>
 <head>
     <title>ES2016 Fundamentals</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="src/css/theme.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>-->
+    <script src="node_modules/babel-polyfill/dist/polyfill.min.js"></script>
 </head>
 <body>
-    <script src="node_modules/babel-polyfill/dist/polyfill.min.js"></script>
+    
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 left-section">
+                    <header>upper header</header>
+                    <header>lower header</header>
+                </div>
+                <div class="col-md-9 right-section">
+                    <section>about</section>
+                    <section>education and experience</section>
+                    <section>portfolio</section>
+                    <section>about</section>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="dist/app.js"></script>
 </body>
 </html>
