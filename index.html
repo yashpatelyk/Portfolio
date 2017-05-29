@@ -1,27 +1,107 @@
 <html>
+
 <head>
     <title>ES2016 Fundamentals</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="src/css/theme.css">
+    <link rel="stylesheet" href="dist/css/theme.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>-->
     <script src="node_modules/babel-polyfill/dist/polyfill.min.js"></script>
 </head>
+
 <body>
-    
+
     <div class="wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 left-section">
-                    <header>upper header</header>
-                    <header>lower header</header>
+                    <header class="upper-header">
+                        <div class="profile-image">
+                            <img src="dist/img/profile.JPG" alt="Profile photo" width="100%" height="272px">
+                            <span>Yash Patel</span>
+                        </div>
+                        <div class="header-items row">
+                            <div class="header-item selected">
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-user"></i>
+                                    <span>About</span>
+                                </a>
+                            </div>
+                            <div class="header-item">
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-briefcase"></i>
+                                    <span>Experience</span>
+                                </a>
+                            </div>
+                            <div class="header-item">
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-camera"></i>
+                                    <span>Portfolio</span>
+                                </a>
+                            </div>
+                            <div class="header-item">
+                                <a href="#">
+                                    <i class="glyphicon glyphicon-earphone"></i>
+                                    <span>Contact</span>
+                                </a>
+                            </div>
+                        </div>
+                    </header>
+                    <header class="lower-header">
+                        <div class="social">
+                            <span class="social-icon"><img src="dist/img/facebook.png" alt="fb"/></span>
+                            <span class="social-icon"><img src="dist/img/twitter.png" alt="fb"/></span>
+                            <span class="social-icon"><img src="dist/img/linkedin.png" alt="fb"/></span>
+                        </div>
+                    </header>
                 </div>
                 <div class="col-md-9 right-section">
-                    <section>about</section>
-                    <section>education and experience</section>
-                    <section>portfolio</section>
-                    <section>about</section>
+                    <section id="about"></section>
+                    <section id="education-section"></section>
+                    <section id="portfolio-section"></section>
+                    <section id="contact-section" class="active-section">
+                        <div class="section-wrapper">
+                            <div id="sub-section">
+                                <h4 class="sub-header">map location</h4>
+                                <div class="sub-section-content">
+                                    <div class="map">Map goes here</div>
+                                </div>
+                            </div>
+                            <div class="sub-section">
+                                <h4 class="sub-header">contact info</h4>
+                                <div class="sub-section-content">
+                                    <div class="block-content">
+                                        <i class="glyphicon glyphicon-map-marker"></i>
+                                        <div class="address">
+                                            <p>24/b Gulab Park Society, Sola Over bridge Cross Road, Thaltej, Ahmedabad-380 061.</p>
+                                        </div>
+                                        <div class="more-info">
+                                            <div class="info-item">
+                                                <div>Email: yashpatel68714@gmail.com</div>
+                                                <i class="glyphicon glyphicon-send"></i>
+                                            </div>
+                                            <div class="info-item">
+                                                <div>Tel: <br>+91-8511829891</div>
+                                                <i class="glyphicon glyphicon-earphone"></i>
+                                            </div>
+                                            <div class="info-item">
+                                                <div>Website: www.google.co.in</div>
+                                                <i class="glyphicon glyphicon-link"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-section">
+                                <h4 class="sub-header">send me an email</h4>
+
+                            </div>
+                            <div class="sub-section">
+
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -29,4 +109,5 @@
 
     <script src="dist/app.js"></script>
 </body>
+
 </html>

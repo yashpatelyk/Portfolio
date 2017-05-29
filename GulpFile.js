@@ -20,7 +20,7 @@ gulp.task('browser-sync',['es6'], function() {
 });
 
 gulp.task('watch', () => {
-    gulp.watch("src/**/*.{html,htm,js,css}").on('change', browserSync.reload);
+    gulp.watch("dist/**/*.{html,htm,js,css}").on('change', browserSync.reload);
     gulp.watch("index.html").on('change', browserSync.reload);
     gulp.watch("src/**/*.js", ['es6']);
 });
