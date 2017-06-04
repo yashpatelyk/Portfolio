@@ -8,6 +8,8 @@
 
     <!--<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>-->
     <script src="node_modules/babel-polyfill/dist/polyfill.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -22,7 +24,7 @@
                             <span>Yash Patel</span>
                         </div>
                         <div class="header-items row">
-                            <div class="header-item selected">
+                            <div class="header-item">
                                 <a href="#">
                                     <i class="glyphicon glyphicon-user"></i>
                                     <span>About</span>
@@ -40,7 +42,7 @@
                                     <span>Portfolio</span>
                                 </a>
                             </div>
-                            <div class="header-item">
+                            <div class="header-item selected">
                                 <a href="#">
                                     <i class="glyphicon glyphicon-earphone"></i>
                                     <span>Contact</span>
@@ -48,7 +50,7 @@
                             </div>
                         </div>
                     </header>
-                    <header class="lower-header">
+                    <header class="lower-header bgwhite">
                         <div class="social">
                             <span class="social-icon"><img src="dist/img/facebook.png" alt="fb"/></span>
                             <span class="social-icon"><img src="dist/img/twitter.png" alt="fb"/></span>
@@ -57,24 +59,28 @@
                     </header>
                 </div>
                 <div class="col-md-9 right-section">
-                    <section id="about"></section>
-                    <section id="education-section"></section>
-                    <section id="portfolio-section"></section>
-                    <section id="contact-section" class="active-section">
+                    <section id="about" class="bgwhite">about</section>
+                    <section id="education-section" class="bgwhite">education</section>
+                    <section id="portfolio-section" class="bgwhite">portfolio</section>
+                    <section id="contact-section" class="bgwhite active-section">
                         <div class="section-wrapper">
-                            <div id="sub-section">
-                                <h4 class="sub-header">map location</h4>
+                            <div class="sub-section">
+                                <p class="sub-header">map location</p>
                                 <div class="sub-section-content">
-                                    <div class="map">Map goes here</div>
+                                    <div class="map">
+                                        <!--<img src="dist/img/map.jpg" alt="map">-->
+                                    </div>
                                 </div>
                             </div>
                             <div class="sub-section">
-                                <h4 class="sub-header">contact info</h4>
+                                <p class="sub-header">contact info</p>
                                 <div class="sub-section-content">
                                     <div class="block-content">
                                         <i class="glyphicon glyphicon-map-marker"></i>
                                         <div class="address">
-                                            <p>24/b Gulab Park Society, Sola Over bridge Cross Road, Thaltej, Ahmedabad-380 061.</p>
+                                            <p>24/b Gulab Park Society, Sola Over bridge Cross Road, Thaltej, Ahmedabad-380
+                                                061.
+                                            </p>
                                         </div>
                                         <div class="more-info">
                                             <div class="info-item">
@@ -86,7 +92,7 @@
                                                 <i class="glyphicon glyphicon-earphone"></i>
                                             </div>
                                             <div class="info-item">
-                                                <div>Website: www.google.co.in</div>
+                                                <div>Website: <br>www.google.co.in</div>
                                                 <i class="glyphicon glyphicon-link"></i>
                                             </div>
                                         </div>
@@ -94,20 +100,41 @@
                                 </div>
                             </div>
                             <div class="sub-section">
-                                <h4 class="sub-header">send me an email</h4>
-
+                                <p class="sub-header">send me an email</p>
+                                <div class="sub-section-content">
+                                    <form action="#">
+                                        <div class="form-row">
+                                            <div>
+                                                <input type="text" placeholder="Name" class="form-item" />
+                                            </div>
+                                            <div>
+                                                <input type="text" placeholder="Email" class="form-item" />
+                                            </div>
+                                        </div>
+                                        <input type="text" placeholder="Subject" class="form-item" />
+                                        <br>
+                                        <textarea name="" id="" cols="45" rows="10" placeholder="Message" class="form-item"></textarea>
+                                        <input type="button" value="Send you mail" class="btn btn-success" />
+                                    </form>
+                                </div>
                             </div>
-                            <div class="sub-section">
 
-                            </div>
                         </div>
                     </section>
+                    <div class="sub-section bgWhite">
+                        <div class="sub-header"></div>
+                        <div class="buttons">
+                            <a href="#" class="btn"><i class="glyphicon glyphicon-download"></i>Download My CV</a>
+                            <a href="#" class="btn"><i class="glyphicon glyphicon-print"></i>Print My Resume</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="dist/app.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKfZ3yEEZaGYeg2rOdEI8MHlS-aWJ-AzY&callback=createMap"></script>
 </body>
 
 </html>

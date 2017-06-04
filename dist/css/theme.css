@@ -5,6 +5,11 @@ ul, li, a{
     margin: 0;
 }
 
+a:visited, a:active, a:focus, a:hover{
+    text-decoration: none;
+}
+
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgba(0,0,0,0.07);
@@ -14,6 +19,7 @@ body{
 }
     
 .left-section{
+    margin-bottom: 20px;
 }
 .profile-image{
     position: relative;
@@ -33,7 +39,7 @@ body{
     margin: 0;
 }
 .header-item{
-    padding: 15px 25px;
+    padding: 20px 25px;
     background-color: #33373d;
     text-align: right;
     text-transform: uppercase;
@@ -50,19 +56,24 @@ body{
     font-size: 12px;
 }
 
-.header-item a:hover{
-    text-decoration: none;
-}
-
-.header-item a:active{
-    text-decoration: none;
-}
-
 .header-item.selected{
     background-color: #cd5353;
 }
 .header-item.selected a{
     color: white;
+}
+
+.header-item:hover{
+    background-color: #cd5353;
+}
+
+.header-item:hover a{
+    color: white;
+}
+
+@keyframes header-selection{
+    0% {background-color: greenyellow;}
+    100% {background-color: red;}
 }
 
 @media screen and (max-width:992px){
@@ -102,8 +113,10 @@ body{
     opacity: 0.7;
 }
 
-.right-section{
+
+.bgwhite{
     background-color:white;
+
 }
 
 section{
@@ -115,12 +128,21 @@ section.active-section{
 }
 
 section .section-wrapper{
-    margin: 30px 0 0 20px;
+    margin: 0 30px;
+    padding: 30px 0;
+}
+
+.section-wrapper .sub-section{
+    margin-bottom: 80px;
 }
 
 section .sub-header{
     font-weight: 900;
     text-transform: uppercase;
+    margin-bottom: 50px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    font-size: 18px;
 }
 
 .sub-section-content .block-content{
@@ -138,8 +160,8 @@ section .sub-header{
 }
 
 .block-content .address{
-    margin: 0 100px 100px 100px;
-    /*padding: 35px;*/
+    /*margin: 0 100px 100px 100px;*/
+    padding: 35px;
 }
 
 .block-content .address p{
@@ -149,14 +171,15 @@ section .sub-header{
 .block-content .more-info{
     display: flex;
     align-content: center;
-    margin: 0 100px;
+    margin: 0 auto;
+    padding: 0 10%;
 }
 
 .more-info .info-item{
     flex: 0 0 33.33%;
 }
 .block-content .more-info .info-item div{
-    margin: -35px 20px;
+    /*margin: -35px 20px;*/
     opacity: 0.5;
     font-weight: 600;
 }
@@ -169,4 +192,113 @@ section .sub-header{
     background: #33373d;
     padding: 12px;
     top:36px;
+}
+
+@media screen and (max-width: 640px){
+    .block-content .more-info{
+        display: block;
+    }
+    .more-info .info-item{
+        padding-bottom: 10%;
+    }
+    .block-content .more-info i{
+        top: 0;
+    }
+    .block-content .more-info .info-item div{
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (max-width: 375px){
+    .block-content .address p{
+        font-size: 14px;
+    }
+    
+}
+
+/*.sub-section-content .map img{
+    width: 100%;
+}*/
+
+.sub-section .map{
+    width: 100%;
+    height: 400px;
+    background: grey;
+}
+@media screen and (max-width: 375px){
+    .sub-section .map{
+        height: 300px;
+    }
+}
+
+.sub-section-content .form-row{
+    display: flex;
+    justify-content: center;
+    align-items: baseline
+}
+.sub-section-content .form-row div{
+    padding: 0 15px 0 0;
+    width: 100%;
+}
+.sub-section-content .form-row div:last-child{
+    padding: 0;
+    width: 100%;
+}
+
+
+.sub-section-content .form-item{
+    padding: 15px;
+    width: 100%;
+    margin: 15px 0 0 0;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgba(0,0,0,0.06)
+}
+
+.sub-section-content form{
+    position: relative;
+}
+
+.btn.btn-success{
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    background-color: #cd5353;
+    border: none;
+    outline: none;
+    right: 45px;
+    bottom: -20px;
+    position: absolute;
+}
+.btn.btn-success:hover{
+    background-color: #33373d;
+}
+.btn.btn-success:active{
+    background-color: #33373d;
+}
+
+.sub-section .buttons{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.buttons .btn{
+    padding: 8px 32px;
+    background-color: #cd5353;
+    color: white;
+    border-radius: 0;
+}
+
+.buttons .btn i{
+    margin-right: 20px;
+}
+
+.buttons .btn:first-child{
+    background-color: #33373d;
+}
+
+@media screen and (max-width: 450px){
+    .btn:first-child{
+        margin-bottom: 10px;
+    }
 }
