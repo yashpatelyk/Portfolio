@@ -1,14 +1,14 @@
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 var browserSync = require('browser-sync').create();
- 
+
 gulp.task('es6', () => {
     return gulp.src('src/app.js')
         .pipe(babel({
             presets: ['es2015']
         }))
         .pipe(gulp.dest('dist'));
-        
+
 });
 
 gulp.task('browser-sync',['es6'], function() {
@@ -16,7 +16,7 @@ gulp.task('browser-sync',['es6'], function() {
         server: {
             baseDir: "./"
         }
-    });    
+    });
 });
 
 gulp.task('watch', () => {
@@ -26,5 +26,3 @@ gulp.task('watch', () => {
 });
 
 gulp.task('default', ['browser-sync','watch']);
-
-
